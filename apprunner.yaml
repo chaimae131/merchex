@@ -1,0 +1,11 @@
+version: 1.0
+runtime: python3
+Gbuild:
+commands :
+build:
+- pip install -r requirements.txt
+
+runtime-version: 3.8.16
+command: sh startup.sh
+network:
+port: 8000
