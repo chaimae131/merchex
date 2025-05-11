@@ -1,2 +1,3 @@
 #!/bin/bash
-python manage.py collectstatic && gunicorn -- workers 2 merchex.wsgi
+python manage.py collectstatic --noinput
+gunicorn merchex.wsgi:application --workers 2 --bind 0.0.0.0:$PORT
